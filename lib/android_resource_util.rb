@@ -10,8 +10,7 @@ class AndroidResourceUtil
       if File.directory?(f)
         filePath = "#{f}/#{fileName}"
         if File.exist?(filePath)
-          # foldName = File.basename("#{f}")
-          matchedFiles.push("#{filePath}")
+          matchedFiles.push("#{f}")
         end
       end
     end

@@ -10,7 +10,18 @@ module Androidcopy
   end
 
   def self.copy(source_path, target_path, fileName)
-    files = AndroidResourceUtil.getAllFiles(source_path,fileName)
+    files = AndroidResourceUtil.getAllFiles(source_path, fileName)
+    files.each { |i|
+      source = "#{i}/#{fileName}"
+      foldName = File.basename("#{i}")
+
+      target_fold = "#{target_path}/#{foldName}"
+      target = "#{target_fold}/#{fileName}"
+      FileUtils.makedirs("#{target_fold}")
+      FileUtils.copy source, target
+    }
+
+    length = files.length
 
   end
 

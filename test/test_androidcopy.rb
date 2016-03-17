@@ -12,8 +12,13 @@ class AndroidcopyTest < Test::Unit::TestCase
     source_path = "/Users/djzhang/Desktop/wikipedia/apps-android-wikipedia/app/src/main/res"
     dest_Path = "/tmp/IEATTA-ANDROID/res"
     fileName = "ic_search.png"
-    files = AndroidResourceUtil.getAllFiles(source_path, fileName)
 
+    Androidcopy.copy(source_path,dest_Path,fileName)
+
+    files = AndroidResourceUtil.getAllFiles(source_path, fileName)
     assert_equal files.length, 10
+
+
+
   end
 end
