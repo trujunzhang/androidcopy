@@ -2,11 +2,13 @@ require "androidcopy/version"
 
 require 'find'
 require 'fileutils'
+require 'android_resource_util'
 
 module Androidcopy
 
-  def self.hi(language = "english")
-    puts "Hello djzhang! #{language}"
+  def self.hi(sourcePath, destPath, fileName)
+    files = AndroidResourceUtil.getAllFiles(sourcePath,fileName)
+    # puts "Hello djzhang! #{language}"
   end
 
   def copy_without_svn(source_path, target_path)

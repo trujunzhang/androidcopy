@@ -5,7 +5,7 @@ require "bundler/gem_tasks"
 require('androidcopy')
 
 task :default do
-  Androidcopy.hi
+  Androidcopy.hi("/Users/djzhang/RubymineProjects/androidcopy","djzhang","ic_launch.png")
 end
 
 
