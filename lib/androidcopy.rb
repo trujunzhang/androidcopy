@@ -5,10 +5,13 @@ require 'fileutils'
 require 'android_resource_util'
 
 module Androidcopy
+  def self.hi(language = "english")
+    puts "Hello world! #{language}"
+  end
 
-  def self.hi(sourcePath, destPath, fileName)
-    files = AndroidResourceUtil.getAllFiles(sourcePath,fileName)
-    # puts "Hello djzhang! #{language}"
+  def self.copy(source_path, target_path, fileName)
+    files = AndroidResourceUtil.getAllFiles(source_path,fileName)
+
   end
 
   def copy_without_svn(source_path, target_path)
