@@ -21,8 +21,6 @@ module Androidcopy
       FileUtils.copy source, target
     }
 
-    length = files.length
-
   end
 
   def copy_without_svn(source_path, target_path)
