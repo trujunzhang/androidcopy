@@ -5,8 +5,8 @@ require 'fileutils'
 
 module Androidcopy
 
-  def self.hi
-    puts "Hello djzhang!"
+  def self.hi(language = "english")
+    puts "Hello djzhang! #{language}"
   end
 
   def copy_without_svn(source_path, target_path)
