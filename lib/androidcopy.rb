@@ -11,7 +11,7 @@ module Androidcopy
 
   def self.copy(source_path, target_path, fileName)
     files = AndroidResourceUtil.getAllFiles(source_path, fileName)
-    puts "Count: #{files.length}"
+    puts "total count: #{files.length}"
     files.each { |i|
       source = "#{i}/#{fileName}"
       foldName = File.basename("#{i}")
@@ -20,9 +20,9 @@ module Androidcopy
       target = "#{target_fold}/#{fileName}"
       FileUtils.makedirs("#{target_fold}")
 
-      puts "Copy"
-      puts "from #{source}"
-      puts "to #{target}"
+      puts "copy:"
+      puts " from #{source}"
+      puts " to #{target}"
       FileUtils.copy source, target
     }
 
