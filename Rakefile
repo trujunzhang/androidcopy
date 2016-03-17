@@ -11,7 +11,7 @@ require "bundler/gem_tasks"
 
 # task :default => :spec
 
-# require('androidcopy')
+require('androidcopy')
 
 task :default do
   source_Path = "/Users/djzhang/Desktop/wikipedia/apps-android-wikipedia/app/src/main/res"
