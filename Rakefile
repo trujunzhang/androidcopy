@@ -5,7 +5,9 @@ require "bundler/gem_tasks"
 require('androidcopy')
 
 task :default do
-  Androidcopy.hi("/Users/djzhang/RubymineProjects/androidcopy","djzhang","ic_launch.png")
+  sourcePath = "/Users/djzhang/Desktop/wikipedia/apps-android-wikipedia/app/src/main/res"
+  destPath = "/tmp/IEATTA-ANDROID/res"
+  Androidcopy.hi(sourcePath, destPath, "ic_launch.png")
 end
 
 
