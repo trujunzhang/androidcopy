@@ -14,6 +14,6 @@ class AndroidcopyTest < Test::Unit::TestCase
     fileName = "ic_search.png"
     files = AndroidResourceUtil.getAllFiles(source_path, fileName)
 
-    assert_equal files.length,10
+    assert_equal files.length, 10
   end
 end

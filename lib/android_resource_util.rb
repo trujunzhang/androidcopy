@@ -4,13 +4,13 @@ require 'fileutils'
 class AndroidResourceUtil
 
   def self.getAllFiles(source_path, fileName)
-    matchedFiles = Array().new
+    matchedFiles = []
 
     Dir.glob("#{source_path}/*").each do |f|
       if File.directory?(f)
         filePath = "#{f}/#{fileName}"
         if File.exist?(filePath)
-          foldName = File.basename("#{f}")
+          # foldName = File.basename("#{f}")
           matchedFiles.push("#{filePath}")
         end
       end
