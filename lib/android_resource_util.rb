@@ -4,18 +4,12 @@ require 'fileutils'
 class AndroidResourceUtil
 
   def self.getAllFiles(source_path, fileName)
-    Dir.chdir(sourcePath)
-    puts Dir.pwd
-
-    Find.find(source_path) do |source|
-      puts source
-      # target = source.sub(/^#{source_path}/, target_path)
-      # if File.directory? source
-      #   Find.prune if File.basename(source) == '.svn'
-      #   FileUtils.mkdir target unless File.exists? target
-      # else
-      #   FileUtils.copy source, target
-      # end
+    Dir.glob("#{source_path}/*").each do |f|
+      if File.directory?(f)
+        foldName = File.basename("#{f}")
+        filePath = "#{f}/#{fileName}"
+        puts "#{f}\n"
+      end
     end
   end
 end
