@@ -5,8 +5,8 @@ require 'fileutils'
 require 'android_resource_util'
 
 module Androidcopy
-  def self.hi(language = "english")
-    puts "Hello world! #{language}"
+  def self.hi()
+    return "world!"
   end
 
   def self.copy(source_path, target_path, fileName)

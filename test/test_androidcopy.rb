@@ -1,19 +1,9 @@
-require 'minitest/autorun'
+require 'test/unit'
 require 'Androidcopy'
 
-class AndroidcopyTest < Minitest::Test
-  def test_english_hello
-    assert_equal "hello world",
-                 Hola.hi("english")
-  end
-
+class AndroidcopyTest < Test::Unit::TestCase
   def test_any_hello
-    assert_equal "hello world",
-                 Hola.hi("ruby")
-  end
-
-  def test_spanish_hello
-    assert_equal "hola mundo",
-                 Hola.hi("spanish")
+    message = Androidcopy.hi()
+    assert_equal "world!", message
   end
 end
